@@ -1,4 +1,5 @@
 <?php
+    $salida
     if(isset($_POST['seve'])){
         $nombre = $_POST['name'];
         $sintaxis = $_POST['descripcion'];
@@ -7,8 +8,8 @@
         fwrite($archivo,$nombre);
         
         $comando = "./prueva < $nombre";
-        $salida = shell_exec($comando);
-        var_dump($salida);
+        shell_exec($comando,$salida);
+        
     }
 ?>
 
@@ -40,6 +41,13 @@
         </div>
         <button type="submit" name="save" class="btn btn-success">Compilar</button>
     </form>
+    <div class="container">
+        <p>
+            <?php
+                var_dump($salida);;
+            ?>
+        </p>
+    </div>
 </div>
 </body>
 </html>
