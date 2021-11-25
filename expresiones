@@ -1,0 +1,18 @@
+MAIN{
+DEC a,b;
+INPUT b;
+a=1+2+b;
+OUTPUT a;
+}
+
+MAIN{
+DEC x,y,z;
+INPUT x;
+INPUT y;
+z=1+x;
+if(x<y)
+z=x+y;
+else
+z=0;
+OUTPUT z;
+}
