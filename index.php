@@ -1,5 +1,5 @@
 <?php
-    $salida
+    $salida;
     if(isset($_POST['seve'])){
         $nombre = $_POST['name'];
         $sintaxis = $_POST['descripcion'];
