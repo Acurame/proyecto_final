@@ -1,14 +1,16 @@
 <?php
     $salida;
+    $nombre;
     if(isset($_POST['seve'])){
         $nombre = $_POST['name'];
         $sintaxis = $_POST['descripcion'];
     
         $archivo = fopen("$nombre","a") or die ("Error al crear archivo ");
         fwrite($archivo,$nombre);
-        
         $comando = "./prueva < $nombre";
         shell_exec($comando,$salida);
+        var_dump($salida);
+        
         
     }
 ?>
@@ -43,9 +45,7 @@
     </form>
     <div class="container">
         <p>
-            <?php
-                var_dump($salida);;
-            ?>
+            
         </p>
     </div>
 </div>
